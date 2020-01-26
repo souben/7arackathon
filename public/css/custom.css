@@ -1,0 +1,20 @@
+#form-container-login {
+    margin: 50px auto !important;
+    background-color: #fff !important;
+    border-radius: 30px !important;
+    border:1px solid #ccc !important;
+    padding: 25px !important;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5) !important;
+}
+@media only screen and (min-width:1025px) {
+    #my-img {
+        margin-left: 114px !important;
+        margin-top: 50px !important;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .light-logo {
+        margin-left: 175px !important;
+    }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <title>myBadeel - Dashboard</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/colors/blue.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link type="text/css" rel="stylesheet" href="../css/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jsgrid-theme.min.css" />
+    <link href="../css/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/horizontal-timeline.css" rel="stylesheet">
+    <link href="../css/magnific-popup.css" rel="stylesheet">
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.magnific-popup-init.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.../js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<%- include('preloader') -%>
+<div id="main-wrapper">
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    <b>
+                        <img src="../img/logo.png" alt="homepage" class="light-logo" width="110" />
+                    </b>
+                    </a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav mr-auto mt-md-0">
+                    <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                </ul>
+                <ul class="navbar-nav my-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../img/1.jpg" alt="user" class="profile-pic" /></a>
+                        <div class="dropdown-menu dropdown-menu-right scale-up">
+                            <ul class="dropdown-user">
+                                <li>
+                                    <div class="dw-user-box">
+                                        <div class="u-img"><img src="../img/1.jpg" alt="user"></div>
+                                        <div class="u-text">
+                                            <h4>Steave Jobs</h4>
+                                            <p class="text-muted">varun@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/logout"><i class="fa fa-power-off"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-us"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right scale-up"> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="left-sidebar">
+        <div class="scroll-sidebar">
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">PERSONAL</li>
+                    <li><a href="/"><i class="mdi mdi-gauge"></i>Dashboard</a></li>
+                    <li><a href="/myContract"><i class="fas fa-folder-open"></i>My contracts</a></li>
+                    <li><a href="/myCar"><i class="fas fa-car"></i>My cars</a></li>
+                    <li><a href="/reparationAndMaintenance"><i class="fas fa-cogs"></i> Reparation & Maintenance</a></li>
+                    <li><a href="/services"><i class="far fa-handshake"></i>Services</a></li>
+                    <li><a href="/help"><i class="fas fa-question"></i>Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>   
+<div class="page-wrapper">
+    <div class="container-fluid">
+       
+        <div class="row">
+            <div class="col-12">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-actions">
+                                <a class="" data-action="collapse"><i class="ti-minus"></i></a>
+                                <a class="btn-minimize" data-action="expand"><i class="mdi mdi-arrow-expand"></i></a>
+                                <a class="btn-close" data-action="close"><i class="ti-close"></i></a>
+                            </div>
+                            <h4 class="card-title m-b-0">Product Overview</h4>
+                        </div>
+                        <div class="card-body collapse show">
+                            <div class="table-responsive">
+                                <table class="table product-overview">
+                                    <thead>
+                                        <tr>
+                                            <th>Contrat</th>
+                                            <th>Model</th>
+                                            <th>Photo</th>
+                                            <th>Delivery date</th>
+                                            <th>Status</th>
+                                            <th>Details</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% 
+                                        if(data){
+
+                                        
+                                        for(var i=0;i< data.length;i++){ %>
+                                        <tr>
+                                            <td> <%= data[i].contract %> </td>
+                                            <td> <%= data[i].name %> </td>
+                                            <td>
+                                                <img src="<%= data[i].imgUrl %>" alt="mac_mouse" width="80">
+                                            </td>
+
+                                            <td><%= data[i].deliveryDate %></td>
+                                            <td>
+                                                <span class="label label-danger font-weight-100">Failed</span>
+                                            </td>
+                                            <td><a href="#">Details</a></td>
+                                            <td><a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="" data-original-title="Edit"><i class="ti-marker-alt"></i></a> <a href="javascript:void(0)" class="text-inverse" title="" data-toggle="tooltip" data-original-title="Delete"><i class="ti-trash"></i></a></td>
+                                        </tr>
+                                        <% }} %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        Copyrigths &copy; Badeel - All rights reserved.
+    </footer>
+</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/sidebarmenu.js"></script>
+    <script src="../js/sticky-kit.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+    <script src="../js/dashboard2.js"></script>
+    <script src="../js/echarts-all.js"></script>
+    <script src="../js/echarts-init.js"></script>
+    <script src="../js/db.js"></script>
+    <script type="text/javascript" src="../js/jsgrid.min.js"></script>
+    <script src="../js/jsgrid-init.js"></script>
+    <script src="../js/bootstrap-table.min.js"></script>
+    <script src="../js/bootstrap-table.ints.js"></script>
+    <script src="../js/horizontal-timeline.js"></script>
+</body>
+
+</html>

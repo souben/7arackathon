@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <title>myBadeel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body style="background-color: #1e88e5;min-height: 100vh;">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <img id="my-img" src="img/logo.png" width="300">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div id="form-container-login" class="col-lg-6">
+                <form method="POST" action="/register">
+                    <div class="form-group">
+                        <h2>Create new account</h2>
+                        <hr>
+                    </div>
+                    <div class="form-group">
+                        <label>Email :</label>
+                        <input class="form-control" name="email" type="email" placeholder="Enter your email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password :</label>
+                        <input class="form-control" name="password" type="password" placeholder="Enter your password" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password :</label>
+                        <input class="form-control" name="cpassword" type="password" placeholder="Repeate password" required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <p>By creating this account, you agree to our <a href="#">Terms of use </a>& <a href="#">Privacy Policy</a></p>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <button type="submit" class="btn waves-effect waves-light btn-rounded btn-info">Register</button>
+                    </div>
+                    <div class="form-group">
+                        <p>Already have an account ? <a href="/login">Log in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sticky-kit.min.js"></script>
+</body>
+
+</html>

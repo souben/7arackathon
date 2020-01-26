@@ -1,0 +1,116 @@
+<%- include('header') -%>
+<%- include('preloader') -%>
+<%- include('navbar') -%>   
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Add a new car to the database (BETA)</h3>
+                        <form method="POST" action="/createCar">
+                            <div class="form-group">
+                                <label>Contract N ° :</label>
+                                <select class="form-control" name="contract">
+                                    
+                                    <% if(data){
+                                        for(var i=0;i< data.length;i++){%>
+                                            <option value="<%= data[i].numero %> "> <%= data[i].numero %></option>
+                                        <%}
+                                    }%>
+                                    
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Modele :</label>
+                                <input class="form-control" type="text" name="name" placeholder="Modele">
+                            </div>
+                            <div class="form-group">
+                                <label>Delivery Date :</label>
+                                <input class="form-control" type="date" name="deliveryDate" placeholder="Delivery Date">
+                            </div>
+                            <div class="form-group">
+                                <label>Date MEC :</label>
+                                <input class="form-control" type="date" name="dateMEC" placeholder="Date MEC">
+                            </div>
+                            <div class="form-group">
+                                <label>Odometre :</label>
+                                <input class="form-control" type="number" name="odometre" placeholder="Odométre">
+                            </div>
+                            <div class="form-group">
+                                <label>Phase WW :</label>
+                                <input class="form-control" type="number" name="phaseWW" placeholder="Phase WW">
+                            </div>
+                            <div class="form-group">
+                                <label>Date remise recip :</label>
+                                <input class="form-control" type="date" name="dateRemiseRecip" placeholder="DateRemiseRecip">
+                            </div>
+                            <div class="form-group">
+                                <label>Phase immat :</label>
+                                <input class="form-control" type="number" name="phaseImmat" placeholder="phaseImmat">
+                            </div>
+                            <div class="form-group">
+                                <label>Date immat :</label>
+                                <input class="form-control" type="date" name="dateImmat" placeholder="Date Immat">
+                            </div>
+                            <div class="form-group">
+                                <label>Wassel 1 :</label>
+                                <input class="form-control" type="text" name="wassel1" placeholder="Wassel 1">
+                            </div>
+                            <div class="form-group">
+                                <label>Wassel 2 :</label>
+                                <input class="form-control" type="text" name="wassel2" placeholder="Wassel 2">
+                            </div>
+                            <div class="form-group">
+                                <label>Wassel 3 :</label>
+                                <input class="form-control" type="text" name="wassel3" placeholder="Wassel 3">
+                            </div>
+                            <div class="form-group">
+                                <label>Visite Technique :</label>
+                                <input class="form-control" type="number" name="visiteTech" placeholder="Visite technique">
+                            </div>
+                            <div class="form-group">
+                                <label>Prochainne Rev :</label>
+                                <input class="form-control" type="number" name="prochainRev" placeholder="Prochain Rev">
+                            </div>
+                            <div class="form-group">
+                                <label>Depassement :</label>
+                                <input class="form-control" type="number" name="depassement" placeholder="Depassement">
+                            </div>
+                            <div class="form-group">
+                                <label>Contrat Actuel :</label>
+                                <input class="form-control" type="number" name="contratActuel" placeholder="Contrat Actuel">
+                            </div>
+                            <div class="form-group">
+                                <label>Vitesse Max :</label>
+                                <input class="form-control" type="number" name="vitesseMax" placeholder="Vitesse Max">
+                            </div>
+                            <div class="form-group">
+                                <label>Consommation mensuel :</label>
+                                <input class="form-control" type="number" name="ConsoMentuelle" placeholder="Consomation Montuelle">
+                            </div>
+                            <div class="form-group">
+                                <label>Image URL :</label>
+                                <input class="form-control" type="text" name="imgUrl" placeholder="URL">
+                            </div>
+                            <div class="form-group">
+                                <label>Date Entretien :</label>
+                                <input class="form-control" type="date" name="dateEntretien" placeholder="Date entretien">
+                            </div>
+                            <div class="form-group">
+                                <label>DateVT</label>
+                                <input class="form-control" type="date" name="dateVT" placeholder="Date VT">
+                            </div>
+                            <input class="btn btn-info" type="submit" value="submit" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer class="footer">
+        Copyrigths &copy; Badeel - All rights reserved.
+    </footer>
+</div>
+</div>
+<%- include('footer') -%>

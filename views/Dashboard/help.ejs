@@ -1,0 +1,54 @@
+<%- include('header') -%>
+<%- include('preloader') -%>
+<%- include('navbar') -%>
+<style>
+    #voice-tracker {
+        margin: 150px auto;
+        color: #fff;
+        text-align: center;
+    }
+    #start_button {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+    #mic {
+        margin: 32% auto;
+        font-size: 36px;
+    }
+    #final_span {
+        color:#455a64 !important;
+    }
+</style>
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+           <div class="col-lg-12 justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3">
+                        <select class="form-control" id="select_language"></select>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="select_dialect"></select>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div id="results" style="margin-top: 50px;">
+                        <span id="final_span" class="final"></span>
+                        <span id="interim_span" class="interim"></span>
+                        <p>
+                      </div>
+                </div>
+                <div id="voice-tracker">
+                    <button id="start_button" class="btn btn-info"><i id="mic" class="fas fa-microphone"></i></button>
+                </div>
+
+           </div>
+        </div>
+    </div>
+    <footer class="footer">
+        Copyrigths &copy; Badeel - All rights reserved.
+    </footer>
+</div>
+</div>
+<%- include('footer') -%>
